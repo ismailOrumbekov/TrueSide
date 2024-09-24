@@ -1,0 +1,14 @@
+@media (min-width: 992px) {
+  .boxed-layout .container-scroller {
+    background: #c6c8ca;
+    padding: 0 calc((100% - 1200px) / 2);
+  }
+  .boxed-layout .navbar.fixed-top {
+    margin: auto;
+    max-width: 1200px;
+  }
+}
+
+.container-scroller {
+  overflow: hidden;
+}

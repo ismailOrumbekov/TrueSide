@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('https://ideanomics.ru/wp-content/uploads/2017/09/Secret.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+}
+
+.login-box {
+    max-width: 400px;
+    width: 100%;
+    background-color: #1D2473; /* Полностью чёрный фон */
+    border-radius: 20px; /* Закругленные углы */
+}
+
+h2 {
+    font-weight: 500;
+    color: white;
+}
+
+.input-group-text {
+    background-color: #f0f0f0; /* Фон для иконок */
+    border: none;
+    border-radius: 0;
+}
+
+.input-group input {
+    border-left: none; /* Убираем левую границу у текстового поля */
+}
+
+.input-group-prepend .input-group-text {
+    border-right: none; /* Убираем правую границу у иконки */
+}
+
+.form-control {
+    border: 1px solid #ddd; /* Легкая рамка для полей */
+    border-radius: 10px 10px; /* Закругленные углы */
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #ff5c5c, #ff66c4);
+    border: none;
+    border-radius: 30px; /* Закругленные кнопки */
+    padding: 10px;
+    font-size: 16px;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #ff66c4, #ff5c5c);
+}
+
+/* Стили для ссылки восстановления пароля */
+.forgot-password {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+}
+
+.forgot-password a {
+    color: #ff66c4;
+    text-decoration: none;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для ссылки "Создать аккаунт" */
+.create-account {
+    text-align: center;
+    color: white;
+    margin-top: 10px;
+}
+
+.create-account a {
+    color: #ff66c4;
+    text-decoration: none;
+}
+
+.create-account a:hover {
+    text-decoration: underline;
+}
+
+</style>
+
+<body>
+    <div class="container-fluid vh-100 d-flex justify-content-center align-items-center">
+        <div class="card p-4 shadow-lg rounded login-box">
+            <h2 class="text-center mb-4">Регистрация</h2>
+            <form method="post">
+                <div class="form-group">
+                    <label for="username" class="sr-only">Никнейм</label>
+                    <div class="input-group">
+                        <input type="text" id="username" class="form-control" placeholder="Придумайте никнейм" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="username" class="sr-only">Никнейм</label>
+                    <div class="input-group">
+                        <input type="email" id="email" class="form-control" placeholder="Введите почту" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="firstPassword" class="sr-only">Придумайте пароль</label>
+                    <div class="input-group">
+                        <input type="password" id="firstPassword" class="form-control" placeholder="Придумайте пароль" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="secondPassword" class="sr-only">Повторите пароль</label>
+                    <div class="input-group">
+                        <input type="password" id="secondPassword" class="form-control" placeholder="Повторите пароль" required>
+                    </div>
+                </div>
+
+                <button style="background: #131A5B" type="submit" class="btn btn-primary btn-block">Войти</button>
+
+                <!-- Ссылка для восстановления пароля -->
+                <div class="create-account">
+                    <p>Забыли пароль? <a style="color: white;" href="#">Восстановить пароль</a></p>
+                </div>
+
+                <!-- Текст и ссылка для создания аккаунта -->
+                <div class="create-account">
+                    <p>Нет аккаунта? <a href="#">Создать аккаунт</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
