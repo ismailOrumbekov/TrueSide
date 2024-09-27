@@ -1,0 +1,69 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" type="img/png" href="{% static "imgs/littleLogo.svg" %}">
+
+    <link rel="stylesheet" href=" {% static 'styles/style.css' %}">
+    <title>TrueSide</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__item">
+                    <div class="header__logo"><span>True</span>Side</div>
+                    <div class="header__search">
+                        <input type="text" placeholder="Поиск">
+                    </div>
+                </div>
+                <a href="#" class="header__settings">
+                    <img src=" {% static '/images/headerImages/settings-icon.svg' %} " alt="settings-icon">
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <div class="container">
+            <div class="sidebar__handler" id="sidebar__handler">
+                <img src=" {% static 'images/contentImages/arrow-icon.svg' %}" alt="arrow-icon" onclick="toggleSidebar()">
+            </div>
+            <div class="content__wrapper">
+                <div class="content__sidebar sidebar__hidden" id="sidebar">
+                    <ul class="sidebar__list">
+                        <div class="sidebar__list-item">
+                            <li><a href="#"><img src=" {% static 'images/contentImages/profile-icon.svg' %}" alt="profile">My page</a></li>
+                            <li><a href="#"><img src=" {% static 'images/contentImages/post-icon.svg' %}" alt="post">Posts</a></li>
+                            <li><a href="#"><img src=" {% static 'images/contentImages/news-icon.svg' %} " alt="news">News</a></li>
+                            <li><a href="#"><img src=" {% static 'images/contentImages/teacher-icon.svg' %} " alt="teachers">Teachers</a></li>
+                        </div>
+                        <div class="sidebar__list-item-help">
+                            <li><a href="#"><img src=" {% static 'images/contentImages/settings-blue-icon.svg' %}" alt="settings">Settings</a></li>
+                            <li><a href="#"><img src=" {% static 'images/contentImages/help-icon.svg' %}" alt="help">Help</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="content__main">
+                    {% block content %}
+
+
+                    {% endblock %}
+
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+    <script src=" {% static 'js/script.js' %}"></script>
+</body>
+</html>

@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import login, authenticate
 
 # def login_page(request):
-#     return render(request, "Pages/loginPage.html")
+#     return render(request, "Pages/LoginPage.html")
 
 def registration_page(request):
     return render(request, "Pages/RegistrationPage.html")
@@ -12,12 +12,9 @@ def registration_page(request):
 from django.contrib.auth import authenticate, login
 
 def login_page(request):
-    print("entered")
     if request.method == 'POST':
-        print("posteed")
         username = request.POST['username']
         password = request.POST['password']
-        # Изменяем вызов authenticate на именованные параметры
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
@@ -25,5 +22,12 @@ def login_page(request):
         else:
             return redirect('login')
 
-    return render(request, "Pages/loginPage.html")
+    return render(request, "Pages/LoginPage.html")
 
+
+def profile_page(request):
+    return render(request, "Pages/ProfilePage.html")
+
+
+def posts_page(request):
+    return render(request, "Pages/PostsPage.html")
